@@ -1,6 +1,5 @@
 #!/bin/bash
 
-INPUT_CONFIG_PATH="$1"
 CONFIG=""
 
 # check if a custom config have been provided
