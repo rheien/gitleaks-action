@@ -3,9 +3,9 @@
 CONFIG=""
 
 # check if a custom config have been provided
-if [ -f "$GITHUB_WORKSPACE/rules.toml" ]; 
+if [ -f "$GITHUB_WORKSPACE/$INPUT_CONFIG_PATH" ]; 
 then
-  CONFIG=" --config-path=$GITHUB_WORKSPACE/rules.toml"
+  CONFIG=" --config-path=$GITHUB_WORKSPACE/$INPUT_CONFIG_PATH"
 fi
 
 echo running gitleaks "$(gitleaks --version) with the following command👇"
@@ -27,7 +27,7 @@ then
   echo "$GITLEAKS_RESULT"
   echo "::set-output name=exitcode::$GITLEAKS_RESULT"
   echo "----------------------------------"
-  #echo "$CAPTURE_OUTPUT"
+  echo "$CAPTURE_OUTPUT"
   echo "::set-output name=result::$CAPTURE_OUTPUT"
   echo "----------------------------------"
   exit 1
