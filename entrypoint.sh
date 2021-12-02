@@ -26,7 +26,7 @@ then
   echo "$GITLEAKS_RESULT"
   echo "::set-output name=exitcode::$GITLEAKS_RESULT"
   echo "----------------------------------"
-  echo "$CAPTURE_OUTPUT"
+  #echo "$CAPTURE_OUTPUT"
   echo "::set-output name=result::$CAPTURE_OUTPUT"
   echo "----------------------------------"
   exit 1
