@@ -3,8 +3,8 @@
 CONFIG=""
 
 # check if a custom config have been provided
-if [ -f "$GITHUB_WORKSPACE/$INPUT_CONFIG_PATH" ]; then
-  CONFIG=" --config-path=$GITHUB_WORKSPACE/$INPUT_CONFIG_PATH"
+if [ -f "$GITHUB_WORKSPACE/rules.toml" ]; then
+  CONFIG=" --config-path=$GITHUB_WORKSPACE/rules.toml"
 fi
 
 echo running gitleaks "$(gitleaks --version) with the following command👇"
